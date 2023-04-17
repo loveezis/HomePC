@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Interface2 {
 
 	public static void main(String[] args) {
-		userinfo userif = new userinfo();
+		userinfo3 userif = new userinfo3();
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("사용자 아이디를 입력하세요");
@@ -17,7 +17,7 @@ public class Interface2 {
 
 	}
 }
-class userinfo implements user2,user1{
+class userinfo3 implements user2,user1{
 	
 	private int total;
 	boolean found = false;
@@ -46,9 +46,7 @@ class userinfo implements user2,user1{
 		catch (Exception e) {
 				
 		}
-		
 		while(w < this.total) {
-			
 			if(userid.equals(user2.infodata[w][0])) {
 				found = true;
 				//문자를 숫자로 변환

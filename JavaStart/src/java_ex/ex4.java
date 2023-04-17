@@ -19,7 +19,7 @@ class lotto {
 	int w = 0;
 	int lottoNum;
 	public void random() {
-		boolean found = false;
+		
 		while(rnumber.size() < 7) {
 			lottoNum = (int) Math.ceil(Math.random()*46);
 			
@@ -32,6 +32,6 @@ class lotto {
 			}
 			w++;
 		}
-		System.out.printf("이번주 로또 번호 \n%s\n보너스 번호는 %d",rnumber,bonusBall);
+		System.out.printf("이번주 로또 번호 \n%s\n마지막 보너스 번호는 %d",rnumber,bonusBall);
 	}
 }
