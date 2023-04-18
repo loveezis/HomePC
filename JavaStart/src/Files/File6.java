@@ -1,8 +1,6 @@
 package Files;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.Scanner;
 
@@ -14,21 +12,16 @@ public class File6 {
 		Notice n = new Notice();
 		try {
 			n.view();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			System.out.println("메소드 함수 오류");
-			if(e.getMessage()!=null) {
-
-				System.out.println(e);
-				
-			}
 		}
 	}
 }
 class Notice{
 	Scanner sc;
 	FileReader fr;
-	public void view() throws IOException{
-		fr = new FileReader("D:\\Project\\HomePC\\JavaStart\\src\\Files\\Notice.txt");
+	public void view() throws Exception{
+		fr = new FileReader("D:\\Project\\HomePC\\JavaStart\\src\\Files\\notice.txt");
 		sc = new Scanner(this.fr);
 		//해당 scanner에 파일 내용을 모두 적용시킴
 		//System.in : 직접입력

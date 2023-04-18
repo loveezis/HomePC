@@ -1,6 +1,7 @@
 package Files;
 
 import java.io.FileReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,10 +12,8 @@ public class File7 {
 		member mb = new member();
 		try {
 			mb.client();
-
 		} catch (Exception e) {
 			System.out.println("메소드 오류");
-			e.printStackTrace();
 		}
 	}
 }
@@ -28,7 +27,6 @@ class member {
 
 	public void client() throws Exception {
 		Um2 = new ArrayList<>();
-		
 		fr = new FileReader("D:\\Project\\HomePC\\JavaStart\\src\\Files\\member.txt");
 		sc = new Scanner(fr);
 
@@ -43,10 +41,8 @@ class member {
 			}
 			Um2.add(Um);
 		}
+		fr.close();
+		sc.close();
 		System.out.println(Um2);
-		
-//		int result = Integer.parseInt(Um2.get(0).get(1)) + Integer.parseInt(Um2.get(1).get(1));
-//		System.out.println(result);
-		  
 	}
 }
