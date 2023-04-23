@@ -1,6 +1,7 @@
 package java_ex;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class lottoNum {
 
@@ -16,7 +17,7 @@ class bbbb {
 	int bonusBall;
 	public void lucky() {
 
-		while(Num2.size() < 7) {
+		while(Num2.size() < 6) {
 			lottoBall = (int)Math.ceil(Math.random()*46);
 			
 			if(!Num2.contains(lottoBall)) {
@@ -24,6 +25,7 @@ class bbbb {
 				
 			}
 		}	
+		Collections.sort(Num2);
 		System.out.printf("이번주 추첨번호 \n%s",Num2);
 	}
 }
